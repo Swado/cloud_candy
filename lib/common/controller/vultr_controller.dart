@@ -43,11 +43,9 @@ class VultrController {
     final response = await dio.get<Map<String, dynamic>>('/account');
 
     if (response.statusCode == 200) {
-      final accounts = AccountModel.fromJson(
+      return AccountModel.fromJson(
         response.data!['account'] as Map<String, dynamic>,
       );
-
-      return accounts;
     } else {
       throw Exception(response.statusCode);
     }
@@ -56,12 +54,10 @@ class VultrController {
   Future<List<VultrServerModel>> getServers() async {
     final response = await dio.get<Map<String, dynamic>>('/instances');
     if (response.statusCode == 200) {
-      final instances = (response.data!['instances'] as List)
+      return (response.data!['instances'] as List)
           .map(
               (item) => VultrServerModel.fromJson(item as Map<String, dynamic>))
           .toList();
-
-      return instances;
     } else {
       throw Exception(response.statusCode);
     }
