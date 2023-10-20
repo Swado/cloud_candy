@@ -1,7 +1,6 @@
-import 'package:cloud_candy/home/home.dart';
+import 'package:cloud_candy/features/home/view/home_page.dart';
 import 'package:cloud_candy/l10n/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
 class App extends StatefulWidget {
   const App({super.key});

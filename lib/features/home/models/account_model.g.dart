@@ -15,7 +15,6 @@ _$AccountModelImpl _$$AccountModelImplFromJson(Map<String, dynamic> json) =>
       lastPaymentDate: json['last_payment_date'] as String? ?? null,
       lastPaymentAmount:
           (json['last_payment_amount'] as num?)?.toDouble() ?? null,
-      api: json['api'] as String? ?? null,
     );
 
 Map<String, dynamic> _$$AccountModelImplToJson(_$AccountModelImpl instance) =>
@@ -26,5 +25,4 @@ Map<String, dynamic> _$$AccountModelImplToJson(_$AccountModelImpl instance) =>
       'email': instance.email,
       'last_payment_date': instance.lastPaymentDate,
       'last_payment_amount': instance.lastPaymentAmount,
-      'api': instance.api,
     };

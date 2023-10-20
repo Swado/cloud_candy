@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'server_model.dart';
+part of 'vultr_server_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ServerModelImpl _$$ServerModelImplFromJson(Map<String, dynamic> json) =>
-    _$ServerModelImpl(
+_$VultrServerModelImpl _$$VultrServerModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$VultrServerModelImpl(
       id: json['id'] as String? ?? null,
       os: json['os'] as String? ?? null,
       ram: json['ram'] as int? ?? null,
@@ -33,17 +34,18 @@ _$ServerModelImpl _$$ServerModelImplFromJson(Map<String, dynamic> json) =>
           (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               null,
       osId: json['os_id'] as int? ?? null,
-      app_id: json['app_id'] as int? ?? null,
-      image_id: json['image_id'] as String? ?? null,
-      firewall_group_id: json['firewall_group_id'] as String? ?? null,
+      appId: json['app_id'] as int? ?? null,
+      imageId: json['image_id'] as String? ?? null,
+      firewallGroupId: json['firewall_group_id'] as String? ?? null,
       features: (json['features'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           null,
-      user_scheme: json['user_scheme'] as String? ?? null,
+      userScheme: json['user_scheme'] as String? ?? null,
     );
 
-Map<String, dynamic> _$$ServerModelImplToJson(_$ServerModelImpl instance) =>
+Map<String, dynamic> _$$VultrServerModelImplToJson(
+        _$VultrServerModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'os': instance.os,
@@ -68,9 +70,9 @@ Map<String, dynamic> _$$ServerModelImplToJson(_$ServerModelImpl instance) =>
       'tag': instance.tag,
       'tags': instance.tags,
       'os_id': instance.osId,
-      'app_id': instance.app_id,
-      'image_id': instance.image_id,
-      'firewall_group_id': instance.firewall_group_id,
+      'app_id': instance.appId,
+      'image_id': instance.imageId,
+      'firewall_group_id': instance.firewallGroupId,
       'features': instance.features,
-      'user_scheme': instance.user_scheme,
+      'user_scheme': instance.userScheme,
     };

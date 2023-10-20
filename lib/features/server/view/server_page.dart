@@ -1,34 +1,24 @@
-import 'package:cloud_candy/home/models/account_model.dart';
-import 'package:cloud_candy/home/models/server_model.dart';
-import 'package:cloud_candy/requests/api_requests.dart';
+import 'package:cloud_candy/common/controller/vultr_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ServerPage extends HookConsumerWidget {
-  final AccountModel accountModel;
-  ServerPage({super.key, required this.accountModel});
+  const ServerPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final servers = useState<List<ServerModel>>([]);
-    print("api on serverpage ${accountModel}");
-    Future<void> getServers() async {
-      servers.value = await ApiRequests().getServers(accountModel.api ?? '')
-          as List<ServerModel>;
-    }
+    final serversValue = ref.watch(serversProvider);
 
-    useEffect(
-      () {
-        getServers();
-        return null;
-      },
-      [],
-    );
     return Scaffold(
-      appBar: AppBar(title: Text("Servers")),
-      body: Column(
-        children: servers.value
-            .map((item) => Card(
+      appBar: AppBar(title: const Text('Servers')),
+      body: serversValue.when(
+        data: (servers) => Padding(
+          padding: const EdgeInsets.all(12),
+          child: ListView.builder(
+              itemCount: servers.length,
+              itemBuilder: (context, i) {
+                final server = servers[i];
+                return Card(
+                  // TodoSwaraj: Use ListTile
                   child: Row(
                     children: [
                       Padding(
@@ -46,7 +36,7 @@ class ServerPage extends HookConsumerWidget {
                                 alignment: Alignment.topRight,
                                 child: CircleAvatar(
                                   radius: 5,
-                                  backgroundColor: item.status == 'active'
+                                  backgroundColor: server.status == 'active'
                                       ? Colors.green
                                       : Colors.red,
                                 ),
@@ -63,16 +53,19 @@ class ServerPage extends HookConsumerWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(item.label.toString()),
-                            Text(item.os.toString()),
-                            Text('Ram: ${item.ram}'),
+                            Text(server.label.toString()),
+                            Text(server.os.toString()),
+                            Text('Ram: ${server.ram}'),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
-                ))
-            .toList(),
+                );
+              }),
+        ),
+        error: (error, stackTrace) => Center(child: Text(error.toString())),
+        loading: () => const Center(child: CircularProgressIndicator()),
       ),
     );
   }

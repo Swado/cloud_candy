@@ -26,7 +26,6 @@ mixin _$AccountModel {
   String? get email => throw _privateConstructorUsedError;
   String? get lastPaymentDate => throw _privateConstructorUsedError;
   double? get lastPaymentAmount => throw _privateConstructorUsedError;
-  String? get api => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,8 +45,7 @@ abstract class $AccountModelCopyWith<$Res> {
       String? name,
       String? email,
       String? lastPaymentDate,
-      double? lastPaymentAmount,
-      String? api});
+      double? lastPaymentAmount});
 }
 
 /// @nodoc
@@ -69,7 +67,6 @@ class _$AccountModelCopyWithImpl<$Res, $Val extends AccountModel>
     Object? email = freezed,
     Object? lastPaymentDate = freezed,
     Object? lastPaymentAmount = freezed,
-    Object? api = freezed,
   }) {
     return _then(_value.copyWith(
       balance: freezed == balance
@@ -96,10 +93,6 @@ class _$AccountModelCopyWithImpl<$Res, $Val extends AccountModel>
           ? _value.lastPaymentAmount
           : lastPaymentAmount // ignore: cast_nullable_to_non_nullable
               as double?,
-      api: freezed == api
-          ? _value.api
-          : api // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
 }
@@ -118,8 +111,7 @@ abstract class _$$AccountModelImplCopyWith<$Res>
       String? name,
       String? email,
       String? lastPaymentDate,
-      double? lastPaymentAmount,
-      String? api});
+      double? lastPaymentAmount});
 }
 
 /// @nodoc
@@ -139,7 +131,6 @@ class __$$AccountModelImplCopyWithImpl<$Res>
     Object? email = freezed,
     Object? lastPaymentDate = freezed,
     Object? lastPaymentAmount = freezed,
-    Object? api = freezed,
   }) {
     return _then(_$AccountModelImpl(
       balance: freezed == balance
@@ -166,10 +157,6 @@ class __$$AccountModelImplCopyWithImpl<$Res>
           ? _value.lastPaymentAmount
           : lastPaymentAmount // ignore: cast_nullable_to_non_nullable
               as double?,
-      api: freezed == api
-          ? _value.api
-          : api // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -184,8 +171,7 @@ class _$AccountModelImpl implements _AccountModel {
       this.name = null,
       this.email = null,
       this.lastPaymentDate = null,
-      this.lastPaymentAmount = null,
-      this.api = null});
+      this.lastPaymentAmount = null});
 
   factory _$AccountModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$AccountModelImplFromJson(json);
@@ -208,13 +194,10 @@ class _$AccountModelImpl implements _AccountModel {
   @override
   @JsonKey()
   final double? lastPaymentAmount;
-  @override
-  @JsonKey()
-  final String? api;
 
   @override
   String toString() {
-    return 'AccountModel(balance: $balance, pendingCharges: $pendingCharges, name: $name, email: $email, lastPaymentDate: $lastPaymentDate, lastPaymentAmount: $lastPaymentAmount, api: $api)';
+    return 'AccountModel(balance: $balance, pendingCharges: $pendingCharges, name: $name, email: $email, lastPaymentDate: $lastPaymentDate, lastPaymentAmount: $lastPaymentAmount)';
   }
 
   @override
@@ -230,14 +213,13 @@ class _$AccountModelImpl implements _AccountModel {
             (identical(other.lastPaymentDate, lastPaymentDate) ||
                 other.lastPaymentDate == lastPaymentDate) &&
             (identical(other.lastPaymentAmount, lastPaymentAmount) ||
-                other.lastPaymentAmount == lastPaymentAmount) &&
-            (identical(other.api, api) || other.api == api));
+                other.lastPaymentAmount == lastPaymentAmount));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, balance, pendingCharges, name,
-      email, lastPaymentDate, lastPaymentAmount, api);
+      email, lastPaymentDate, lastPaymentAmount);
 
   @JsonKey(ignore: true)
   @override
@@ -260,8 +242,7 @@ abstract class _AccountModel implements AccountModel {
       final String? name,
       final String? email,
       final String? lastPaymentDate,
-      final double? lastPaymentAmount,
-      final String? api}) = _$AccountModelImpl;
+      final double? lastPaymentAmount}) = _$AccountModelImpl;
 
   factory _AccountModel.fromJson(Map<String, dynamic> json) =
       _$AccountModelImpl.fromJson;
@@ -278,8 +259,6 @@ abstract class _AccountModel implements AccountModel {
   String? get lastPaymentDate;
   @override
   double? get lastPaymentAmount;
-  @override
-  String? get api;
   @override
   @JsonKey(ignore: true)
   _$$AccountModelImplCopyWith<_$AccountModelImpl> get copyWith =>

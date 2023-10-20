@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'server_model.dart';
+part of 'vultr_server_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ServerModel _$ServerModelFromJson(Map<String, dynamic> json) {
-  return _ServerModel.fromJson(json);
+VultrServerModel _$VultrServerModelFromJson(Map<String, dynamic> json) {
+  return _VultrServerModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ServerModel {
+mixin _$VultrServerModel {
   String? get id => throw _privateConstructorUsedError;
   String? get os => throw _privateConstructorUsedError;
   int? get ram => throw _privateConstructorUsedError;
@@ -43,23 +43,23 @@ mixin _$ServerModel {
   String? get tag => throw _privateConstructorUsedError;
   List<String>? get tags => throw _privateConstructorUsedError;
   int? get osId => throw _privateConstructorUsedError;
-  int? get app_id => throw _privateConstructorUsedError;
-  String? get image_id => throw _privateConstructorUsedError;
-  String? get firewall_group_id => throw _privateConstructorUsedError;
+  int? get appId => throw _privateConstructorUsedError;
+  String? get imageId => throw _privateConstructorUsedError;
+  String? get firewallGroupId => throw _privateConstructorUsedError;
   List<String>? get features => throw _privateConstructorUsedError;
-  String? get user_scheme => throw _privateConstructorUsedError;
+  String? get userScheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ServerModelCopyWith<ServerModel> get copyWith =>
+  $VultrServerModelCopyWith<VultrServerModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ServerModelCopyWith<$Res> {
-  factory $ServerModelCopyWith(
-          ServerModel value, $Res Function(ServerModel) then) =
-      _$ServerModelCopyWithImpl<$Res, ServerModel>;
+abstract class $VultrServerModelCopyWith<$Res> {
+  factory $VultrServerModelCopyWith(
+          VultrServerModel value, $Res Function(VultrServerModel) then) =
+      _$VultrServerModelCopyWithImpl<$Res, VultrServerModel>;
   @useResult
   $Res call(
       {String? id,
@@ -85,17 +85,17 @@ abstract class $ServerModelCopyWith<$Res> {
       String? tag,
       List<String>? tags,
       int? osId,
-      int? app_id,
-      String? image_id,
-      String? firewall_group_id,
+      int? appId,
+      String? imageId,
+      String? firewallGroupId,
       List<String>? features,
-      String? user_scheme});
+      String? userScheme});
 }
 
 /// @nodoc
-class _$ServerModelCopyWithImpl<$Res, $Val extends ServerModel>
-    implements $ServerModelCopyWith<$Res> {
-  _$ServerModelCopyWithImpl(this._value, this._then);
+class _$VultrServerModelCopyWithImpl<$Res, $Val extends VultrServerModel>
+    implements $VultrServerModelCopyWith<$Res> {
+  _$VultrServerModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -128,11 +128,11 @@ class _$ServerModelCopyWithImpl<$Res, $Val extends ServerModel>
     Object? tag = freezed,
     Object? tags = freezed,
     Object? osId = freezed,
-    Object? app_id = freezed,
-    Object? image_id = freezed,
-    Object? firewall_group_id = freezed,
+    Object? appId = freezed,
+    Object? imageId = freezed,
+    Object? firewallGroupId = freezed,
     Object? features = freezed,
-    Object? user_scheme = freezed,
+    Object? userScheme = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -227,36 +227,36 @@ class _$ServerModelCopyWithImpl<$Res, $Val extends ServerModel>
           ? _value.osId
           : osId // ignore: cast_nullable_to_non_nullable
               as int?,
-      app_id: freezed == app_id
-          ? _value.app_id
-          : app_id // ignore: cast_nullable_to_non_nullable
+      appId: freezed == appId
+          ? _value.appId
+          : appId // ignore: cast_nullable_to_non_nullable
               as int?,
-      image_id: freezed == image_id
-          ? _value.image_id
-          : image_id // ignore: cast_nullable_to_non_nullable
+      imageId: freezed == imageId
+          ? _value.imageId
+          : imageId // ignore: cast_nullable_to_non_nullable
               as String?,
-      firewall_group_id: freezed == firewall_group_id
-          ? _value.firewall_group_id
-          : firewall_group_id // ignore: cast_nullable_to_non_nullable
+      firewallGroupId: freezed == firewallGroupId
+          ? _value.firewallGroupId
+          : firewallGroupId // ignore: cast_nullable_to_non_nullable
               as String?,
       features: freezed == features
           ? _value.features
           : features // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      user_scheme: freezed == user_scheme
-          ? _value.user_scheme
-          : user_scheme // ignore: cast_nullable_to_non_nullable
+      userScheme: freezed == userScheme
+          ? _value.userScheme
+          : userScheme // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$ServerModelImplCopyWith<$Res>
-    implements $ServerModelCopyWith<$Res> {
-  factory _$$ServerModelImplCopyWith(
-          _$ServerModelImpl value, $Res Function(_$ServerModelImpl) then) =
-      __$$ServerModelImplCopyWithImpl<$Res>;
+abstract class _$$VultrServerModelImplCopyWith<$Res>
+    implements $VultrServerModelCopyWith<$Res> {
+  factory _$$VultrServerModelImplCopyWith(_$VultrServerModelImpl value,
+          $Res Function(_$VultrServerModelImpl) then) =
+      __$$VultrServerModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -283,19 +283,19 @@ abstract class _$$ServerModelImplCopyWith<$Res>
       String? tag,
       List<String>? tags,
       int? osId,
-      int? app_id,
-      String? image_id,
-      String? firewall_group_id,
+      int? appId,
+      String? imageId,
+      String? firewallGroupId,
       List<String>? features,
-      String? user_scheme});
+      String? userScheme});
 }
 
 /// @nodoc
-class __$$ServerModelImplCopyWithImpl<$Res>
-    extends _$ServerModelCopyWithImpl<$Res, _$ServerModelImpl>
-    implements _$$ServerModelImplCopyWith<$Res> {
-  __$$ServerModelImplCopyWithImpl(
-      _$ServerModelImpl _value, $Res Function(_$ServerModelImpl) _then)
+class __$$VultrServerModelImplCopyWithImpl<$Res>
+    extends _$VultrServerModelCopyWithImpl<$Res, _$VultrServerModelImpl>
+    implements _$$VultrServerModelImplCopyWith<$Res> {
+  __$$VultrServerModelImplCopyWithImpl(_$VultrServerModelImpl _value,
+      $Res Function(_$VultrServerModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -324,13 +324,13 @@ class __$$ServerModelImplCopyWithImpl<$Res>
     Object? tag = freezed,
     Object? tags = freezed,
     Object? osId = freezed,
-    Object? app_id = freezed,
-    Object? image_id = freezed,
-    Object? firewall_group_id = freezed,
+    Object? appId = freezed,
+    Object? imageId = freezed,
+    Object? firewallGroupId = freezed,
     Object? features = freezed,
-    Object? user_scheme = freezed,
+    Object? userScheme = freezed,
   }) {
-    return _then(_$ServerModelImpl(
+    return _then(_$VultrServerModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -423,25 +423,25 @@ class __$$ServerModelImplCopyWithImpl<$Res>
           ? _value.osId
           : osId // ignore: cast_nullable_to_non_nullable
               as int?,
-      app_id: freezed == app_id
-          ? _value.app_id
-          : app_id // ignore: cast_nullable_to_non_nullable
+      appId: freezed == appId
+          ? _value.appId
+          : appId // ignore: cast_nullable_to_non_nullable
               as int?,
-      image_id: freezed == image_id
-          ? _value.image_id
-          : image_id // ignore: cast_nullable_to_non_nullable
+      imageId: freezed == imageId
+          ? _value.imageId
+          : imageId // ignore: cast_nullable_to_non_nullable
               as String?,
-      firewall_group_id: freezed == firewall_group_id
-          ? _value.firewall_group_id
-          : firewall_group_id // ignore: cast_nullable_to_non_nullable
+      firewallGroupId: freezed == firewallGroupId
+          ? _value.firewallGroupId
+          : firewallGroupId // ignore: cast_nullable_to_non_nullable
               as String?,
       features: freezed == features
           ? _value._features
           : features // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      user_scheme: freezed == user_scheme
-          ? _value.user_scheme
-          : user_scheme // ignore: cast_nullable_to_non_nullable
+      userScheme: freezed == userScheme
+          ? _value.userScheme
+          : userScheme // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -450,8 +450,8 @@ class __$$ServerModelImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _$ServerModelImpl implements _ServerModel {
-  const _$ServerModelImpl(
+class _$VultrServerModelImpl implements _VultrServerModel {
+  const _$VultrServerModelImpl(
       {this.id = null,
       this.os = null,
       this.ram = null,
@@ -475,16 +475,16 @@ class _$ServerModelImpl implements _ServerModel {
       this.tag = null,
       final List<String>? tags = null,
       this.osId = null,
-      this.app_id = null,
-      this.image_id = null,
-      this.firewall_group_id = null,
+      this.appId = null,
+      this.imageId = null,
+      this.firewallGroupId = null,
       final List<String>? features = null,
-      this.user_scheme = null})
+      this.userScheme = null})
       : _tags = tags,
         _features = features;
 
-  factory _$ServerModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ServerModelImplFromJson(json);
+  factory _$VultrServerModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VultrServerModelImplFromJson(json);
 
   @override
   @JsonKey()
@@ -565,13 +565,13 @@ class _$ServerModelImpl implements _ServerModel {
   final int? osId;
   @override
   @JsonKey()
-  final int? app_id;
+  final int? appId;
   @override
   @JsonKey()
-  final String? image_id;
+  final String? imageId;
   @override
   @JsonKey()
-  final String? firewall_group_id;
+  final String? firewallGroupId;
   final List<String>? _features;
   @override
   @JsonKey()
@@ -585,18 +585,18 @@ class _$ServerModelImpl implements _ServerModel {
 
   @override
   @JsonKey()
-  final String? user_scheme;
+  final String? userScheme;
 
   @override
   String toString() {
-    return 'ServerModel(id: $id, os: $os, ram: $ram, disk: $disk, mainIp: $mainIp, region: $region, plan: $plan, status: $status, allowedBandwidth: $allowedBandwidth, netmaskV4: $netmaskV4, gatewayV4: $gatewayV4, powerStatus: $powerStatus, serverStatus: $serverStatus, v6Network: $v6Network, v6MainIp: $v6MainIp, v6NetworkSize: $v6NetworkSize, label: $label, internalIp: $internalIp, kvm: $kvm, hostname: $hostname, tag: $tag, tags: $tags, osId: $osId, app_id: $app_id, image_id: $image_id, firewall_group_id: $firewall_group_id, features: $features, user_scheme: $user_scheme)';
+    return 'VultrServerModel(id: $id, os: $os, ram: $ram, disk: $disk, mainIp: $mainIp, region: $region, plan: $plan, status: $status, allowedBandwidth: $allowedBandwidth, netmaskV4: $netmaskV4, gatewayV4: $gatewayV4, powerStatus: $powerStatus, serverStatus: $serverStatus, v6Network: $v6Network, v6MainIp: $v6MainIp, v6NetworkSize: $v6NetworkSize, label: $label, internalIp: $internalIp, kvm: $kvm, hostname: $hostname, tag: $tag, tags: $tags, osId: $osId, appId: $appId, imageId: $imageId, firewallGroupId: $firewallGroupId, features: $features, userScheme: $userScheme)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ServerModelImpl &&
+            other is _$VultrServerModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.os, os) || other.os == os) &&
             (identical(other.ram, ram) || other.ram == ram) &&
@@ -630,14 +630,13 @@ class _$ServerModelImpl implements _ServerModel {
             (identical(other.tag, tag) || other.tag == tag) &&
             const DeepCollectionEquality().equals(other._tags, _tags) &&
             (identical(other.osId, osId) || other.osId == osId) &&
-            (identical(other.app_id, app_id) || other.app_id == app_id) &&
-            (identical(other.image_id, image_id) ||
-                other.image_id == image_id) &&
-            (identical(other.firewall_group_id, firewall_group_id) ||
-                other.firewall_group_id == firewall_group_id) &&
+            (identical(other.appId, appId) || other.appId == appId) &&
+            (identical(other.imageId, imageId) || other.imageId == imageId) &&
+            (identical(other.firewallGroupId, firewallGroupId) ||
+                other.firewallGroupId == firewallGroupId) &&
             const DeepCollectionEquality().equals(other._features, _features) &&
-            (identical(other.user_scheme, user_scheme) ||
-                other.user_scheme == user_scheme));
+            (identical(other.userScheme, userScheme) ||
+                other.userScheme == userScheme));
   }
 
   @JsonKey(ignore: true)
@@ -667,29 +666,30 @@ class _$ServerModelImpl implements _ServerModel {
         tag,
         const DeepCollectionEquality().hash(_tags),
         osId,
-        app_id,
-        image_id,
-        firewall_group_id,
+        appId,
+        imageId,
+        firewallGroupId,
         const DeepCollectionEquality().hash(_features),
-        user_scheme
+        userScheme
       ]);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ServerModelImplCopyWith<_$ServerModelImpl> get copyWith =>
-      __$$ServerModelImplCopyWithImpl<_$ServerModelImpl>(this, _$identity);
+  _$$VultrServerModelImplCopyWith<_$VultrServerModelImpl> get copyWith =>
+      __$$VultrServerModelImplCopyWithImpl<_$VultrServerModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ServerModelImplToJson(
+    return _$$VultrServerModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ServerModel implements ServerModel {
-  const factory _ServerModel(
+abstract class _VultrServerModel implements VultrServerModel {
+  const factory _VultrServerModel(
       {final String? id,
       final String? os,
       final int? ram,
@@ -713,14 +713,14 @@ abstract class _ServerModel implements ServerModel {
       final String? tag,
       final List<String>? tags,
       final int? osId,
-      final int? app_id,
-      final String? image_id,
-      final String? firewall_group_id,
+      final int? appId,
+      final String? imageId,
+      final String? firewallGroupId,
       final List<String>? features,
-      final String? user_scheme}) = _$ServerModelImpl;
+      final String? userScheme}) = _$VultrServerModelImpl;
 
-  factory _ServerModel.fromJson(Map<String, dynamic> json) =
-      _$ServerModelImpl.fromJson;
+  factory _VultrServerModel.fromJson(Map<String, dynamic> json) =
+      _$VultrServerModelImpl.fromJson;
 
   @override
   String? get id;
@@ -769,17 +769,17 @@ abstract class _ServerModel implements ServerModel {
   @override
   int? get osId;
   @override
-  int? get app_id;
+  int? get appId;
   @override
-  String? get image_id;
+  String? get imageId;
   @override
-  String? get firewall_group_id;
+  String? get firewallGroupId;
   @override
   List<String>? get features;
   @override
-  String? get user_scheme;
+  String? get userScheme;
   @override
   @JsonKey(ignore: true)
-  _$$ServerModelImplCopyWith<_$ServerModelImpl> get copyWith =>
+  _$$VultrServerModelImplCopyWith<_$VultrServerModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

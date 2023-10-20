@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -17,7 +16,6 @@ class AccountModel with _$AccountModel {
     @Default(null) String? email,
     @Default(null) String? lastPaymentDate,
     @Default(null) double? lastPaymentAmount,
-    @Default(null) String? api,
   }) = _AccountModel;
 
   factory AccountModel.fromJson(Map<String, dynamic> json) =>
